@@ -9,4 +9,4 @@ You can track the battery life in different scenario's, so you can understand in
 * `pip3 install psuitl`
 * ```pip3 install win10toast```
 
-Tkinter is installed by default in windows, if not download and install Active TCL.
+Tkinter is installed by default in windows when installing python, if not download and install Active TCL.
