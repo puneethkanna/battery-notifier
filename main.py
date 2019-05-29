@@ -6,22 +6,12 @@ import tkinter as tk
 import psutil
 from win10toast import ToastNotifier
 import time
-#import webbrowser
-#import atexit
 import threading 
-#import on
-#import off
 global tim
 def on_closing():
     exit(0)
     root.destroy()
 def get_det():
-    ''''try:
-        stop_threads = True
-        t1.join()
-    except:
-        pass
-        stop_threads = False'''
     print("Program entered into get_det")
     try:
         stop_threads = True
@@ -34,7 +24,6 @@ def get_det():
     t1 = threading.Thread(target=on, args=(plugged, f,))
     #on(plugged, f)
     t1.start()
-  # msg = messagebox.showinfo( "Hello Python", "Hello World")
 def sel():
     print("Progrm entered into sel")
     selection = "You selected the option " + str(var.get())
@@ -47,7 +36,7 @@ def sel():
 # Binds the Enter/Return key on your keyboard to the get_input function as an alternative to clicking the button
 print("This program started on"+time.ctime())
 #totalnoti=
-""""
+"""
     battery = psutil.sensors_battery()
     percent = str(battery.percent)
    
@@ -112,21 +101,7 @@ def off(plugged,f):
         on(percent,f)
 def last_func():
     print("")
-#print("The code had stopped if you want to use it run it again\n")
-#battery = psutil.sensors_battery()
-#plugged = battery.power_plugged
-#percent = str(battery.percent)
-#if plugged == False:
-#    plugged = "Not Plugged In"
-#else:
-#    plugged = "Plugged In"
-        # print(percent + '% | ' + plugged)
-        # if __name__ == "__main__":
-#toaster = ToastNotifier()
-#toaster.show_toast(plugged, percent)
-#flag = percent
-#f = int(flag)
-#print(f)
+
 global stop_threads
 stop_threads = False
 if __name__ == "__main__": 
@@ -197,25 +172,3 @@ except:
 top.protocol("WM_DELETE_WINDOW", on_closing)
 
 top.mainloop()
-#atexit.register(top.mainloop)
-"""
-import tkinter as tk
-
-class App(tk.Frame):
-    def __init__(self, master=None):
-        super().__init__(master)
-        self.pack()
-
-# create the application
-myapp = App()
-
-#
-# here are method calls to the window manager class
-#
-myapp.master.title("My Do-Nothing Application")
-myapp.master.minsize(600, 500)
-myapp.master.maxsize(1000, 400)
-
-# start the program
-myapp.mainloop()
-"""
